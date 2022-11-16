@@ -100,6 +100,7 @@ scripts: {
 }
 ```
 
+
 //Create a file .eslintrc.json & copy this code.
 
 {
