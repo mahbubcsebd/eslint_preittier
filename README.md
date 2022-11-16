@@ -97,6 +97,57 @@ or You can also add a new script in the scripts section like below to install ev
 ```json
 scripts: {
     "lint": "yarn add -D prettier @babel/core @babel/eslint-parser eslint-config-prettier eslint-plugin-prettier eslint-plugin-node eslint-config-node && npx install-peerdeps --dev eslint-config-airbnb"
+
+//Create a file .eslintrc.json & copy this code.
+
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "prettier",
+    "plugin:jsx-a11y/recommended"
+  ],
+//   "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "no-console": 0,
+    "react/state-in-constructor": 0,
+    "indent": 0,
+    "linebreak-style": 0,
+    "react/prop-types": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 100,
+        "tabWidth": 4,
+        "semi": true,
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "plugins": ["prettier", "react", "react-hooks"]
+}
+
 }
 ```
 
