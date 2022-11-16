@@ -97,9 +97,20 @@ or You can also add a new script in the scripts section like below to install ev
 ```json
 scripts: {
     "lint": "yarn add -D prettier @babel/core @babel/eslint-parser eslint-config-prettier eslint-plugin-prettier eslint-plugin-node eslint-config-node && npx install-      peerdeps --dev eslint-config-airbnb"
-    }
+}
+```
 
-//Create a file .eslintrc.json & copy this code.
+and then simply run the below command in the terminal -
+
+```sh
+yarn lint #or 'npm run lint'
+```
+
+### Create Linting Configuration file manually
+
+Create a `.eslintrc` file in the project root and enter the below contents:
+
+```json
 
 {
   "extends": [
